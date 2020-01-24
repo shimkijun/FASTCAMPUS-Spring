@@ -1,4 +1,4 @@
-package kr.co.basic;
+package kr.co.basic.web.cli;
 
 import lombok.*;
 

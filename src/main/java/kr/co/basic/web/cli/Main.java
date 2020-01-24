@@ -1,4 +1,4 @@
-package kr.co.basic;
+package kr.co.basic.web.cli;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) throws ClassNotFoundException {
         logger.info("Hello World");
         Class.forName("org.h2.Driver");
-        var url = "jdbc:h2:~/test;MODE=MySQL";
-        try (var connection = DriverManager.getConnection(url,"sa","");
-             var statement = connection.createStatement()) {
+        String url = "jdbc:h2:~/test;MODE=MySQL";
+        try (Connection connection = DriverManager.getConnection(url,"sa","");
+             Statement statement = connection.createStatement()) {
             connection.setAutoCommit(false);
             statement.executeUpdate("drop table member");
             statement.execute("create table member(id int auto_increment,username varchar(255) not null , password varchar(255) not null,primary key(id))");
@@ -24,9 +24,9 @@ public class Main {
                 connection.rollback();
             }
 
-            var resultSet = statement.executeQuery("select * from member");
+            ResultSet resultSet = statement.executeQuery("select * from member");
             while (resultSet.next()){
-                var member = new Member(resultSet);
+                Member member = new Member(resultSet);
                 logger.info(member.toString());
             }
         } catch (SQLException e){
