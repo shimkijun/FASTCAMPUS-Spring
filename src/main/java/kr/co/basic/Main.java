@@ -8,36 +8,29 @@ import java.sql.*;
 public class Main {
     private static Logger logger = LoggerFactory.getLogger(Main.class);
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws ClassNotFoundException {
         logger.info("Hello World");
+        Class.forName("org.h2.Driver");
+        var url = "jdbc:h2:~/test;MODE=MySQL";
+        try (var connection = DriverManager.getConnection(url,"sa","");
+             var statement = connection.createStatement()) {
+            connection.setAutoCommit(false);
+            statement.executeUpdate("drop table member");
+            statement.execute("create table member(id int auto_increment,username varchar(255) not null , password varchar(255) not null,primary key(id))");
+            try {
+                statement.executeUpdate("insert into member(username,password) values('user01','1234')");
+                connection.commit();
+            }catch (SQLException e){
+                connection.rollback();
+            }
 
-        Connection connection = null;
-        Statement statement = null;
-        try {
-            Class.forName("org.h2.Driver");
-            String url = "jdbc:h2:~/test;MODE=MySQL";
-            connection = DriverManager.getConnection(url,"sa","");
-            statement = connection.createStatement();
-
-            ResultSet resultSet = statement.executeQuery("select * from member");
+            var resultSet = statement.executeQuery("select * from member");
             while (resultSet.next()){
-                int id = resultSet.getInt("id");
-                String username = resultSet.getString("username");
-                String password = resultSet.getString("password");
-
-                logger.info("id : " + id + "username : " + username + "password : "+ password);
+                var member = new Member(resultSet);
+                logger.info(member.toString());
             }
-        }catch (ClassNotFoundException e){
+        } catch (SQLException e){
             e.printStackTrace();
-        }catch (SQLException e){
-            e.printStackTrace();
-        }finally {
-            try{
-                statement.close();
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-            connection.close();
         }
     }
 }
