@@ -5,15 +5,16 @@ import lombok.extern.slf4j.Slf4j;
 import java.sql.*;
 
 @Slf4j
-public class Dao {
+public class Dao2 {
+
     private Connection connection;
 
-    public Dao(Connection connection) {
+    public Dao2(Connection connection) {
         this.connection = connection;
     }
 
-    public void run() {
-        try {
+    public void run() throws SQLException{
+        try{
              Statement statement = connection.createStatement();
             connection.setAutoCommit(false);
             statement.executeUpdate("drop table member");
@@ -30,8 +31,8 @@ public class Dao {
                 Member member = new Member(resultSet);
                 log.info(member.toString());
             }
-        }catch (Exception e){
-            e.printStackTrace();
+        } catch (SQLException ex){
+            ex.printStackTrace();
         }
     }
 }
