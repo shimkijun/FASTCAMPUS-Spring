@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans default-init-method="init" default-destroy-method="destroy"
-       xmlns="http://www.springframework.org/schema/beans"
+<beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
 
     <bean id="connectionFactory" class="kr.co.basic.cli.ConnectionFactory">
         <constructor-arg name="driverClass" value="org.h2.Driver"/>
@@ -24,5 +28,6 @@
         <constructor-arg ref="connection"/>
     </bean>
 
-    <bean id="A" class="kr.co.basic.cli.A" />
+    <bean class="kr.co.basic.cli.AppConfig" />
+    <bean class="kr.co.basic.cli.A" />
 </beans>

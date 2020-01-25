@@ -15,16 +15,7 @@ import java.sql.SQLException;
 public class Main {
 
     public static void main(String[] args){
-
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
-//        Dao dao = context.getBean("dao",Dao.class);
-//        ConnectionFactory factory = context.getBean(ConnectionFactory.class);
-//        Connection connection = factory.getConnection();
-//        log.info("{}",connection != null);
-        Lifecycle lifecycle = context.getBean(Lifecycle.class);
-        log.info("{}",lifecycle.isRunning());
         context.close();
-        log.info("{}",lifecycle.isRunning());
-
     }
 }

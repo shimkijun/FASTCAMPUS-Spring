@@ -1,20 +1,36 @@
 package kr.co.basic.cli;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
 
 @Slf4j
-public class A implements ApplicationContextAware {
-    private ApplicationContext applicationContext;
+public class A{
 
+    @Autowired
+//    @Qualifier("b1")
+    @Resource(name = "appB1")
+    private B b;
+
+    @Value("${catalog.name}")
+    private String catalogName;
+
+    @Autowired
+    private ApplicationContext context;
+
+    @PostConstruct
     void init(){
-      log.error("{}",applicationContext);
+        log.error("A post");
     }
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
+    @PreDestroy
+    void destroy(){
+        log.error("A pre destroy");
     }
 }
