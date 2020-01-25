@@ -9,7 +9,7 @@ public class Main {
 //        B b = new B(condition);
 //        A a = new A(b);
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("__dao.xml");
         A a = context.getBean("a",A.class);
         a.print();
     }

@@ -8,6 +8,7 @@
         https://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config />
+    <context:component-scan base-package="kr.co.basic.cli" />
 
     <bean id="connectionFactory" class="kr.co.basic.cli.ConnectionFactory">
         <constructor-arg name="driverClass" value="org.h2.Driver"/>
@@ -29,5 +30,4 @@
     </bean>
 
     <bean class="kr.co.basic.cli.AppConfig" />
-    <bean class="kr.co.basic.cli.A" />
 </beans>
