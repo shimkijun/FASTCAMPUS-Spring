@@ -9,12 +9,14 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 @Slf4j
-@Component
+@Named("a")
 public class A{
 
-    @Autowired
+    @Inject
     private B b;
 
     @Value("${catalog.name}")

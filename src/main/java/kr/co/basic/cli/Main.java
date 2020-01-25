@@ -13,6 +13,7 @@ public class Main {
     public static void main(String[] args){
         ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
         B b = context.getBean(B.class);
+        log.info("{}",b);
         context.close();
     }
 }
