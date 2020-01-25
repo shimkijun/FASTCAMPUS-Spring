@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
+<beans default-init-method="init" default-destroy-method="destroy"
+       xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="connectionFactory" class="kr.co.basic.cli.ConnectionFactory" >
+    <bean id="connectionFactory" class="kr.co.basic.cli.ConnectionFactory">
         <constructor-arg name="driverClass" value="org.h2.Driver"/>
         <constructor-arg name="url" value="jdbc:h2:~/test;MODE=MySQL"/>
         <constructor-arg name="user" value="sa"/>
@@ -22,4 +23,6 @@
     <bean id="dao2" class="kr.co.basic.cli.Dao2">
         <constructor-arg ref="connection"/>
     </bean>
+
+    <bean id="A" class="kr.co.basic.cli.A" />
 </beans>

@@ -12,6 +12,14 @@ public class Dao {
         this.connection = connection;
     }
 
+    void init(){
+        log.info("init");
+    }
+
+    void destroy(){
+        log.info("destroy");
+    }
+
     public void run() {
         try {
              Statement statement = connection.createStatement();
