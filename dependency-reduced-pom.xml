@@ -20,7 +20,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>kr.co.basic.web.cli.Main</mainClass>
+                  <mainClass>kr.co.basic.cli.Main</mainClass>
                 </transformer>
               </transformers>
             </configuration>

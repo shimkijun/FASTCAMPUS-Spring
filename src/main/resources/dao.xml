@@ -4,5 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="kr.co.basic.web.cli.Dao" />
+    <bean id="daoFactory" class="kr.co.basic.cli.DaoFactory" />
+    <bean id="dao" name="dao1,dao2,dao3" class="kr.co.basic.cli.Dao"
+          factory-bean="daoFactory"
+          factory-method="createDao" />
+    <bean id="new_dao" name="dao4" class="kr.co.basic.cli.Dao" />
+
 </beans>

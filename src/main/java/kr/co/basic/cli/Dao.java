@@ -1,4 +1,4 @@
-package kr.co.basic.web.cli;
+package kr.co.basic.cli;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -6,6 +6,7 @@ import java.sql.*;
 
 @Slf4j
 public class Dao {
+
     public void run() throws ClassNotFoundException {
         Class.forName("org.h2.Driver");
         String url = "jdbc:h2:~/test;MODE=MySQL";
