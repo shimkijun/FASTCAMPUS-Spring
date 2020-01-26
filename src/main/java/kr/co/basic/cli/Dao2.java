@@ -13,7 +13,7 @@ public class Dao2 {
         this.connection = connection;
     }
 
-    public void run() throws SQLException{
+    public void run(){
         try{
              Statement statement = connection.createStatement();
             connection.setAutoCommit(false);

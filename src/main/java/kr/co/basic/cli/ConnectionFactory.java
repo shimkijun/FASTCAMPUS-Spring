@@ -32,8 +32,7 @@ public class ConnectionFactory{
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        String url = this.url;
-        return DriverManager.getConnection(url,this.user,this.password);
+        return DriverManager.getConnection(this.url,this.user,this.password);
     }
 
     public void init() throws Exception {

@@ -13,24 +13,18 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 @Slf4j
-@Named("a")
 public class A{
 
-    @Inject
     private B b;
 
-    @Value("${catalog.name}")
-    private String catalogName;
-
-    @Autowired
-    private ApplicationContext context;
-
-    @PostConstruct
-    void init(){
-        log.error("A post");
+    public A(B b) {
+        this.b = b;
     }
 
-    @PreDestroy
+    void init(){
+        log.error("A post" + b);
+    }
+    
     void destroy(){
         log.error("A pre destroy");
     }

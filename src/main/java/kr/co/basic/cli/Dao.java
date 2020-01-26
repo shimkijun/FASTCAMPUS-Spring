@@ -20,7 +20,7 @@ public class Dao {
         log.info("destroy");
     }
 
-    public void run() {
+    public void run(){
         try {
              Statement statement = connection.createStatement();
             connection.setAutoCommit(false);
