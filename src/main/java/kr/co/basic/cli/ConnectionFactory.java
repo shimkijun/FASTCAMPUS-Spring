@@ -2,9 +2,6 @@ package kr.co.basic.cli;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.annotation.Bean;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

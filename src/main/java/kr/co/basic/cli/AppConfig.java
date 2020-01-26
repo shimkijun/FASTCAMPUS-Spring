@@ -1,10 +1,13 @@
 package kr.co.basic.cli;
 
+import kr.co.basic.cli.sevice.MyService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+
 
 import java.sql.Connection;
 
@@ -12,14 +15,15 @@ import java.sql.Connection;
 @Profile({"default","dev"})
 @PropertySource("classpath:application-${spring.profiles.active}.properties")
 public class AppConfig {
+
     @Bean
-    public B b(){
-        return new B();
+    public Connection connection(ConnectionFactory connectionFactory){
+        return connectionFactory.getConnection();
     }
 
-    @Bean(initMethod = "init" , destroyMethod = "destroy")
-    public A a(B b){
-        return new A(b);
+    @Bean
+    public Dao dao(Connection connection){
+        return new Dao(connection);
     }
 
     @Bean(initMethod = "init",destroyMethod = "destroy")
@@ -33,12 +37,12 @@ public class AppConfig {
     }
 
     @Bean
-    public Connection connection(ConnectionFactory connectionFactory){
-        return connectionFactory.getConnection();
+    public LocalValidatorFactoryBean localValidatorFactoryBean(){
+        return new LocalValidatorFactoryBean();
     }
 
     @Bean
-    public Dao dao(Connection connection){
-        return new Dao(connection);
+    public MyService myService(){
+        return new MyService();
     }
 }
