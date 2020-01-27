@@ -1,4 +1,4 @@
-package kr.co.basic.cli;
+package kr.co.basic.cli.entity;
 
 import lombok.*;
 

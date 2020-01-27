@@ -7,12 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e235ca2b-8b65-48d1-b946-8772d94a0104" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/sevice/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/ConnectionFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/Dao2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/aop/AopBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/aop/TransactionBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/aop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/aop/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/entity/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/aop/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/aop/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/aop/TransactionBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/sevice/MyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/validation/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/validation/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/validation/PersonForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/basic/cli/validation/PersonValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-default.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-default.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +99,7 @@
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -93,33 +112,7 @@
       <recent name="E:\JAVA\javaBasic\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="kr.co.basic.cli.Main" />
-      <module name="javaBasic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kr.co.basic.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="kr.co.basic.cli.aop.Main" />
-      <module name="javaBasic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kr.co.basic.cli.aop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kr.co.basic.web.cli.Main" />
       <module name="javaBasic" />
@@ -134,11 +127,51 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kr.co.basic.cli.Main" />
+      <module name="javaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.basic.cli.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kr.co.basic.cli.aop.Main" />
       <module name="javaBasic" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="kr.co.basic.cli.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kr.co.basic.cli.aop.Main" />
+      <module name="javaBasic" />
+      <option name="VM_PARAMETERS" value="-Dspring.org.action=dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.basic.cli.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kr.co.basic.cli.Main" />
+      <module name="javaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.basic.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -298,13 +331,12 @@
       <item itemvalue="JUnit.BeanScopeTest.testEquals" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.30" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
@@ -345,7 +377,8 @@
       <workItem from="1579952110143" duration="4635000" />
       <workItem from="1580007267680" duration="8260000" />
       <workItem from="1580023684500" duration="6212000" />
-      <workItem from="1580092991448" duration="4789000" />
+      <workItem from="1580092991448" duration="7556000" />
+      <workItem from="1580100759318" duration="3081000" />
     </task>
     <servers />
   </component>
@@ -385,14 +418,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Tomcat_Server/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579864319139" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580029907465">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580099342506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580029907465" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1580094221865">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580099342506" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1580102848554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580094221865" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580102848554" />
     <state x="552" y="178" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1579864355653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -401,46 +434,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="645" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580025440610" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580024238920">
+    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580102717376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580024238920" />
+    <state x="392" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580102717376" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580099257016">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580099257016" />
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1580102681160">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580102681160" />
     <state x="761" y="342" key="FileChooserDialogImpl" timestamp="1579864317042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="761" y="342" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579864317042" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1580097903724">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1580103788493">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580097903724" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1580097903724">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580103788493" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1580103788493">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580097903724" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1580097903724">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580103788493" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1580103788493">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580097903724" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1580097903724">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580103788493" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1580103788493">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580097903724" />
-    <state width="1877" height="336" key="GridCell.Tab.1.bottom" timestamp="1580034394994">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580103788493" />
+    <state width="1877" height="336" key="GridCell.Tab.1.bottom" timestamp="1580101695018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="336" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580034394994" />
-    <state width="1877" height="336" key="GridCell.Tab.1.center" timestamp="1580034394994">
+    <state width="1877" height="336" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580101695018" />
+    <state width="1877" height="336" key="GridCell.Tab.1.center" timestamp="1580101695018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="336" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580034394994" />
-    <state width="1877" height="336" key="GridCell.Tab.1.left" timestamp="1580034394994">
+    <state width="1877" height="336" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580101695018" />
+    <state width="1877" height="336" key="GridCell.Tab.1.left" timestamp="1580101695018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="336" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580034394994" />
-    <state width="1877" height="336" key="GridCell.Tab.1.right" timestamp="1580034394994">
+    <state width="1877" height="336" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580101695018" />
+    <state width="1877" height="336" key="GridCell.Tab.1.right" timestamp="1580101695018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="336" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580034394994" />
+    <state width="1877" height="336" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580101695018" />
     <state width="1293" height="247" key="GridCell.Tab.2.bottom" timestamp="1579865240759">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -457,10 +498,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="247" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579865240759" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1579952192810">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1580100734628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579952192810" />
+    <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580100734628" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1579933853922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -469,6 +510,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="609" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580097287978" />
+    <state x="764" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580102454584">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="764" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580102454584" />
     <state x="520" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1580013043679">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -489,18 +534,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="270" key="spring file set editor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580095018438" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/kr/co/basic/cli/AppConfig.java</url>
-          <line>39</line>
-          <properties class="kr.co.basic.cli.AppConfig" method="localValidatorFactoryBean" />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/javaBasic$Main__3_.ic" NAME="Main (3) Coverage Results" MODIFIED="1579927838387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

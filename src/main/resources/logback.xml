@@ -5,7 +5,7 @@
         </encoder>
     </appender>
 
-<!--    <logger name="org.springframework" level="ERROR"></logger>-->
+<!--    <logger name="org.springframework.jdbc" level="debug"></logger>-->
 
     <root level="info">
         <appender-ref ref="STDOUT" />
