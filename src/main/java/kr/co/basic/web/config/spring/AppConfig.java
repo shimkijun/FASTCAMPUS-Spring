@@ -1,11 +1,12 @@
-package kr.co.basic.cli.config;
+package kr.co.basic.web.config.spring;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import kr.co.basic.cli.controller.MemberController;
-import kr.co.basic.cli.dao.MemberDao;
-import kr.co.basic.cli.sevice.MemberService;
+import kr.co.basic.web.dao.MemberDao;
+import kr.co.basic.web.sevice.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -15,6 +16,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+
 import javax.sql.DataSource;
 
 @Configuration
@@ -59,13 +61,11 @@ public class AppConfig {
         return new MemberService(dao);
     }
 
-    @Bean
-    public MemberController memberController(MemberService service){
-        return new MemberController(service);
-    }
 
     @Bean
     public LocalValidatorFactoryBean localValidatorFactoryBean(){
         return new LocalValidatorFactoryBean();
     }
+
+
 }
